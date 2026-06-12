@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e3a5f;
+  --primary-dark: #0f2540;
+  --secondary: #d4af37;
+  --gold: #c9a227;
+  --gold-light: #f4e4ba;
+}
+
+* {
+  font-family: 'Segoe UI', 'Cairo', Tahoma, Arial, sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #1e3a5f 0%, #0f2540 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #c9a227 100%);
+  border-radius: 4px;
+  border: 1px solid #1e3a5f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e5c048 0%, #d4af37 100%);
+}
+
+/* Government Style Elements */
+.gov-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 50%, #1e3a5f 100%);
+  border-bottom: 4px solid #d4af37;
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.3);
+}
+
+.gov-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #d4af37;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gov-button {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 100%);
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.gov-button:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+  color: #1e3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.gold-border {
+  border: 2px solid #d4af37;
+  position: relative;
+}
+
+.gold-border::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Luxury Gradients */
+.luxury-gradient {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 25%, #1e3a5f 50%, #0f2540 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f4e4ba 50%, #d4af37 100%);
+}
+
+/* Royal Pattern Background */
+.royal-pattern {
+  background-color: #1e3a5f;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+}
+
+/* Embossed Effect */
+.embossed {
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.3), -1px -1px 1px rgba(0,0,0,0.1);
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shine-effect {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shine 3s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.6); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Input Styles */
+input, select, textarea {
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  direction: ltr;
+  text-align: right;
+}
+
+select {
+  background-position: left 0.75rem center;
+}
+
+/* Table Styles */
+.luxury-table thead {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 100%);
+  color: #d4af37;
+}
+
+.luxury-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+}
+
+/* Badge Styles */
+.badge-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+  color: #1e3a5f;
+  font-weight: 600;
+}
+
+.badge-navy {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f2540 100%);
+  color: #d4af37;
+}
+
+/* Sidebar Enhancements */
+.sidebar-luxury {
+  background: linear-gradient(180deg, #1e3a5f 0%, #0f2540 50%, #1e3a5f 100%);
+  border-left: 3px solid #d4af37;
+}
+
+/* Card Hover Effects */
+.card-luxury {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.card-luxury:hover {
+  border-color: #d4af37;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.15);
+}
+
+/* Ornamental Divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+/* Seal/Stamp Effect */
+.official-seal {
+  border: 3px double #d4af37;
+  border-radius: 50%;
+  padding: 1rem;
+  background: radial-gradient(circle, #f8fafc, #e2e8f0);
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+  }
+}
